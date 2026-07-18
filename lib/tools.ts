@@ -14,7 +14,7 @@ export interface Tool {
   keywords?: string;
 }
 
-const REPO = "https://github.com/utify/utify"; // placeholder — point at your real repo
+const REPO = "https://github.com/utifytor/utify";
 
 export const sourceUrl = (slug: string) => `${REPO}/tree/main/app/tools/${slug}`;
 
