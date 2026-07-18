@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/about" className="hover:text-fg">
                 Why Utify
               </Link>
-              <a href="https://github.com/utify/utify" className="hover:text-fg">
+              <a href="https://github.com/utifytor/utify" className="hover:text-fg">
                 Source
               </a>
             </nav>
