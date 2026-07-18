@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 };
 
 const DONATE = [
-  ["Monero", "monero:REPLACE_WITH_XMR_ADDRESS"],
-  ["Bitcoin", "bitcoin:REPLACE_WITH_BTC_ADDRESS"],
-  ["Litecoin", "litecoin:REPLACE_WITH_LTC_ADDRESS"],
+  ["Monero", "monero:85YPtpv3KGiith8TbjwFPXXWDhmXCEhRJJ6B9rnhghtfVBnLD9SUNaCiqmvaJMade6fLrt3ppnMzB5h3tzKHhtdUESVS8rg"],
 ] as const;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
