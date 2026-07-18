@@ -54,7 +54,7 @@ Hardening checklist:
 - Run Next.js as an unprivileged user; bind `127.0.0.1` only (`next start -H 127.0.0.1`).
 - Disable access logs in any reverse proxy, or run without one.
 - Add an onion-location-free CSP via proxy or middleware, e.g. `default-src 'self'; script-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'`.
-- Keep the donation addresses in `app/layout.tsx` (currently placeholders) signed in the repo so users can verify them against the site.
+- Keep the donation address hardcoded in `app/layout.tsx` so users can verify the live site against the repo.
 - Publish reproducible-build instructions so the badge claims can be independently verified.
 
 ## Verify, don't trust
