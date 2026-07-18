@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/*
+  Utify design tokens.
+  No webfonts on purpose: Tor Browser (Safest) blocks remote fonts, and a
+  privacy site shouldn't phone anywhere for typography. System stacks only.
+*/
+@theme {
+  --color-ink: #0b0a10; /* page background, near-black with a violet cast */
+  --color-panel: #141220; /* cards, inputs */
+  --color-edge: #262336; /* borders */
+  --color-edge-strong: #3a3552;
+  --color-fg: #eae8f2;
+  --color-mut: #8f8aa3;
+  --color-tor: #a58ce0; /* Tor violet, used sparingly */
+  --color-tor-dim: #6c5aa8;
+  --color-ok: #55d187; /* semantic only: "runs in your browser" */
+  --color-warn: #e2b34e;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+/* subtle vignette so the page doesn't read as flat #000 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    900px 420px at 50% -140px,
+    rgba(165, 140, 224, 0.08),
+    transparent 70%
+  );
+}
+
+::selection {
+  background: rgba(165, 140, 224, 0.35);
+}
+
+a,
+button,
+input,
+select,
+textarea,
+summary {
+  outline-offset: 2px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-tor);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
