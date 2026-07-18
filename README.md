@@ -67,4 +67,4 @@ Every privacy claim on the site maps to a file you can read:
 
 ## License
 
-Pick a license before publishing (AGPL-3.0 fits the "verifiable service" goal: anyone running a modified Utify must publish their changes).
+AGPL-3.0. Anyone running a modified Utify must publish their changes — which is the point.
